@@ -32,6 +32,7 @@ public class Menu extends AppCompatActivity {
     Context context;
     Menu_02 menu_02;
     Button btn, btn_next;
+//hjg
     ImageView imageView,imageView_2,imageView_3,imageView_4;
     ListView listView;
     List<String> list;
