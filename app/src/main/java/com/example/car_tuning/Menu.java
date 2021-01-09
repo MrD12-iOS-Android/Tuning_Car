@@ -37,8 +37,8 @@ public class Menu extends AppCompatActivity {
     ListView listView;
     List<String> list;
     ArrayAdapter<String> arrayAdapter;
-//asasas sx
-
+//asasas sxczxc
+//xcxc
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
