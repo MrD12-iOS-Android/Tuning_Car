@@ -32,12 +32,12 @@ public class Menu extends AppCompatActivity {
     Context context;
     Menu_02 menu_02;
     Button btn, btn_next;
-//hjgascnasc,a
+
     ImageView imageView,imageView_2,imageView_3,imageView_4;
     ListView listView;
     List<String> list;
     ArrayAdapter<String> arrayAdapter;
-
+//asasas sx
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
