@@ -31,6 +31,7 @@ public class Menu extends AppCompatActivity {
     private int count_04 = 0;
     Context context;
     Menu_02 menu_02;
+
     Button btn, btn_next;
 
     ImageView imageView,imageView_2,imageView_3,imageView_4;
