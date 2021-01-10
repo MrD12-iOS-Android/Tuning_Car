@@ -43,7 +43,7 @@ public class Menu extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.menu_01);
-        btn_next = findViewById(R.id.btn_next);
+        //btn_next = findViewById(R.id.btn_next);
         textView_b_01 = findViewById(R.id.txt);
         textView_b_02 = findViewById(R.id.txt_2);
         textView_b_03 = findViewById(R.id.txt_3);
@@ -57,14 +57,11 @@ public class Menu extends AppCompatActivity {
         btn = findViewById(R.id.btn_minus);
 
 
+       /*
         list = new ArrayList<>();
         arrayAdapter = new ArrayAdapter<>(this,R.layout.list_view,list);
         listView.setAdapter(arrayAdapter);
-
-
-
-
-
+        */
 
 
         // Big Image Start
@@ -105,8 +102,7 @@ public class Menu extends AppCompatActivity {
         });
         // Big Image End
 
-        LoadData();
-
+/*
         btn_next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -118,7 +114,6 @@ public class Menu extends AppCompatActivity {
         Date currentTime = Calendar.getInstance().getTime();
         final String formatDate = DateFormat.getDateInstance().format(currentTime);
         Log.d("myLog",formatDate);
-
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -128,6 +123,8 @@ public class Menu extends AppCompatActivity {
                 dilshod.setText(String.valueOf(count));
             }
         });
+
+ */
     }
 
 
@@ -140,32 +137,35 @@ public class Menu extends AppCompatActivity {
 
     // Here Minus--
     public void minus(View view) {
-
-        textView_b_01.setText(asd.getText().toString());
-        arrayAdapter.notifyDataSetChanged();
-        list.add("");
-
-        textView_b_01.setText(String.valueOf(count));
-
-
-
+        if (count > 0){
+            count--;
+            textView_b_01.setText(String.valueOf(count));
+        }
     }
 
     public void minus_2(View view) {
-        count_02--;
+        if (count_02 > 0){
+            count_02--;
+            textView_b_02.setText(String.valueOf(count_02));
+        }
 
-        textView_b_02.setText(String.valueOf(count_02));
     }
 
     public void minus_3(View view) {
-        count_03--;
-        textView_b_03.setText(String.valueOf(count_03));
+        if (count_03 > 0){
+            count_03--;
+            textView_b_03.setText(String.valueOf(count_03));
+        }
+
     }
 
 
     public void minus_4(View view) {
-        count_04--;
-        textView_b_04.setText(String.valueOf(count_04));
+        if (count_04 > 0){
+            count_04--;
+            textView_b_04.setText(String.valueOf(count_04));
+        }
+
     }
 
 
@@ -210,15 +210,13 @@ public class Menu extends AppCompatActivity {
 
 
     public void LoadData() {
-
         SharedPreferences sharedPreferences = getSharedPreferences("saveCount",MODE_PRIVATE);
         count = sharedPreferences.getInt("countValue", count);
         count_02 = sharedPreferences.getInt("countValue_02", count_02);
         count_03 = sharedPreferences.getInt("countValue_03", count_03);
         count_04 = sharedPreferences.getInt("countValue_04", count_04);
         //count_05 = sharedPreferences.getInt("countValue_05", count_05);
-        list.add(String.valueOf(count));
-        dilshod.setText(String.valueOf(count));
+//list.add(String.valueOf(count));
         textView_b_01.setText(String.valueOf(count));
         textView_b_02.setText(String.valueOf(count_02));
         textView_b_03.setText(String.valueOf(count_03));

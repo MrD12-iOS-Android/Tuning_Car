@@ -91,9 +91,6 @@ private void saveData(){
 
         SharedPreferences sharedPreferences = getSharedPreferences("saveCount",MODE_PRIVATE);
         count = sharedPreferences.getInt("countValue", count);
-
-        txt.setText(String.valueOf(count));
-
     }
     @Override
     protected void onPause() {
